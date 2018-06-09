@@ -126,9 +126,9 @@ class ProductDetail extends Component {
     const productTitle = filterData?filterData.name:'';
     const Images = filterData?filterData.images:''; 
     const productDesc = productData?productData.primary_product.desc:'';
-    const productSalePrice = filterData?parseInt(filterData.sale_price,16):'';
-    const productMarkPrice = filterData?parseInt(filterData.mark_price,16):'';
-    const dicountPrice =  parseInt(((productMarkPrice-productSalePrice)/productMarkPrice)*100,16);
+    const productSalePrice = filterData?parseInt(filterData.sale_price):'';
+    const productMarkPrice = filterData?parseInt(filterData.mark_price):'';
+    const dicountPrice =  parseInt(((productMarkPrice-productSalePrice)/productMarkPrice)*100);
 
     let colors=productData?productData.options.filter((item)=>item.attrib_id===productData.attributes[1]._id):'';
     let sizes=productData?productData.options.filter((item)=>item.attrib_id===productData.attributes[0]._id):'';

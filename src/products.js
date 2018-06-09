@@ -50,7 +50,7 @@ class Products extends Component {
           {item.name}
         </Link>  
         <img src="http://i.stack.imgur.com/nGbfO.png" width="8" height="10" alt=""/>
-        <span className="product-price">{parseInt(item.sale_price,16)}</span>
+        <span className="product-price">{parseInt(item.sale_price)}</span>
       </Col>  
       ));
     return (
