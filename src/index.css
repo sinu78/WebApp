@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+}
+
+button:focus,
+input:focus {
+    outline: none !important;
+}
+
+.product-title {
+    margin-top: 20px;
+    color: #9d9d9d;
+    display: block;
+}
+
+.product-title:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.img-area {
+    text-align: center;
+}
+
+.product-box {
+    margin-bottom: 30px;
+}
+
+.img-area {
+    position: relative;
+    height: 250px;
+}
+
+.img-area img {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+}
+
+.product-price {
+    color: #525252;
+    margin-left: 5px;
+    top: 1px;
+    position: relative;
+}
+
+.detail-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.price-section {
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+.mark_price {
+    text-decoration: line-through;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.product-detail-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #343434;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.product-detail-description {
+    font-size: 14px;
+    color: #b1b1b1;
+    font-weight: 400;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 40px;
+}
+
+.product-detail-title:after {
+    content: '';
+    height: 5px;
+    width: 20%;
+    background: #2fada1;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+.save_ruppes {
+    color: #62c1b9;
+    font-weight: 600;
+}
+
+#color-box,
+#size-box {
+    padding-bottom: 20px;
+}
+
+.quantity-section {
+    padding: 20px 0;
+}
+
+.quantity-box {
+    border: 1px solid #2fada1;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.quantity-title {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.add-to-card {
+    background: #2fada1;
+    border: none;
+    color: #fff;
+    padding: 10px 150px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.quantity-box input[type="text"] {
+    width: 40px;
+    text-align: center;
+    background: #2fafa0;
+    border: none;
+    color: #fff;
+    height: 30px;
+}
+
+.quantity-box button {
+    border: none;
+    background: no-repeat;
+    color: #2fafa0;
+    font-size: 18px;
+    font-weight: 700;
+    width: 28px;
+}
+
+.text {
+    margin-bottom: 15px;
+}
+
+#color-box button,
+#size-box button {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    margin-right: 15px;
+    border-radius: 5px;
+    padding: 8px 15px;
+    color: #949494;
+}
+
+#color-box button span {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+
+#color-box button span.Gold {
+    background: #DFA730;
+}
+
+#color-box button span.Silver {
+    background: #bebfba;
+}
+
+#color-box button span.Black {
+    background: #000;
+}
+
+#color-box button span.Rose.Gold {
+    background: #FCDAD1;
+}
+
+#color-box button span.Black.Grey {
+    background: #333333;
+}
+
+button.active {
+    background: #d9d9d9 !important;
+}
+
+.featured-image {
+    text-align: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.errorClass {
+    margin-top: 20px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+.menu ul li a {
+    display: inline-block;
+    padding: 5px;
+    color: #000;
+}
+
+header {
+    box-shadow: 0 0 5px 2px #ccc;
+    padding: 15px 0;
+}
+
+.mid-section {
+    margin-top: 40px;
+}
+
+footer {
+    background: #000;
+    padding: 20px 0;
+}
+
+footer .menu ul li a {
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    header .menu {
+        display: none;
+    }
+    footer .menu {
+        text-align: center;
+    }
+    .add-to-card {
+        padding: 10px 15px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1120px;
+    }
+}
