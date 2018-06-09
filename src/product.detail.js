@@ -36,16 +36,13 @@ class FeaturedImage extends Component {
     const image = this.props.images;
     return(
       <div className="featured-image">
-        <img src={image[0]}/>
+        <img src={image[0]} alt=""/>
       </div>
     );
   }
 } 
 
 class Colors extends Component {
-   constructor(props){
-    super(props);
-  }
   colorFilter(event,id){
     this.props.colorFilter(id);
     let button=document.getElementById('color-box').childNodes;
@@ -69,9 +66,6 @@ class Colors extends Component {
 } 
 
 class Sizes extends Component {
-  constructor(props){
-    super(props);
-  }
   sizeFilter(event,id){
     this.props.sizeFilter(id);
     let button=document.getElementById('size-box').childNodes;
@@ -123,26 +117,22 @@ class ProductDetail extends Component {
   }
 
   render() {
-    const product_id = this.props.match.params.id;
     const productData = this.state.productData;
     const productColorId = this.state.productColorId;
     const productSizeId = this.state.productSizeId;
-    console.log(productColorId);
-    console.log(productSizeId);
     let filterData = productData?productData.product_variations.filter((item)=>(item.sign[0]===productSizeId && item.sign[1]===productColorId) || (item.sign[1]===productSizeId && item.sign[0]===productColorId)):'';
     filterData=filterData[0];
 
     const productTitle = filterData?filterData.name:'';
     const Images = filterData?filterData.images:''; 
     const productDesc = productData?productData.primary_product.desc:'';
-    const productSalePrice = filterData?parseInt(filterData.sale_price):'';
-    const productMarkPrice = filterData?parseInt(filterData.mark_price):'';
-    const dicountPrice =  parseInt(((productMarkPrice-productSalePrice)/productMarkPrice)*100);
+    const productSalePrice = filterData?parseInt(filterData.sale_price,16):'';
+    const productMarkPrice = filterData?parseInt(filterData.mark_price,16):'';
+    const dicountPrice =  parseInt(((productMarkPrice-productSalePrice)/productMarkPrice)*100,16);
 
     let colors=productData?productData.options.filter((item)=>item.attrib_id===productData.attributes[1]._id):'';
     let sizes=productData?productData.options.filter((item)=>item.attrib_id===productData.attributes[0]._id):'';
     const selected_option=productData?productData.selected_option_ids:'';
-    const quantity=this.state.quantity;
 
     const error=<Col className="errorClass" lg={12}>
                     <Alert bsStyle="danger">

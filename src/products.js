@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {Grid, Col, Row,Button} from 'react-bootstrap';
+import {Col,Button} from 'react-bootstrap';
 import ProductService from'./product.service';
-import {BrowserRouter as Router , Route, Link } from 'react-router-dom';
-import ProductDetail from'./product.detail';
-
+import {Link } from 'react-router-dom';
 
 class Products extends Component {
   constructor(props) {
@@ -36,14 +34,6 @@ class Products extends Component {
     });
   }
 
-  // handleScroll(event) {
-  //     let scrollTop = document.documentElement.scrollTop;
-  //     let scrollHeight=document.documentElement.scrollHeight;
-  //     if(scrollTop >= scrollHeight){
-  //         this.onClick();
-  //     }
-  // }
-
   render() {
     const products=this.state.productList;
     const load_more_button= <Col lg={12} className="text-center">
@@ -59,8 +49,8 @@ class Products extends Component {
         <Link to={`/product_detail/${item._id}`} className="product-title">
           {item.name}
         </Link>  
-        <img src="http://i.stack.imgur.com/nGbfO.png" width="8" height="10"/>
-        <span className="product-price">{parseInt(item.sale_price)}</span>
+        <img src="http://i.stack.imgur.com/nGbfO.png" width="8" height="10" alt=""/>
+        <span className="product-price">{parseInt(item.sale_price,16)}</span>
       </Col>  
       ));
     return (
